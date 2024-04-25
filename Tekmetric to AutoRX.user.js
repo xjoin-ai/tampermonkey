@@ -23,7 +23,9 @@ function submit_search() {
 
 function alert_message() {
     const ro = document.getElementsByTagName('title')[0].innerHTML.match('#([0-9]*):')[1]
-    const url = `https://tekmetric.xjoin.io/?ro=${ro}`
+    // const url = `https://autorx.xjoin.io/?ro=${ro}&mi=15000&test=false`
+    // const url = `https://autorx.xjoin.io/?ro=1021112&mi=15000&test=false`
+    const url = `https://dev-autorx.xjoin.io/?ro=1021112&mi=15000&test=false`
     window.open(url, '_blank').focus();
 }
 
