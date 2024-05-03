@@ -11,7 +11,7 @@
 
 function submit_search() {
     'use strict';
-    // future may be to add a check for mileage being added before we show the button.
+    // future may be to add a check for mileage being added before we show the button. For now, 'Adding' will never be found.
     if(!document.getElementsByClassName('pendo-vehicle-odometer')[0].children[1].outerHTML.toString().includes('Adding')){
         // build our button 'AutoRx'
         const innerdiv = document.createElement('div');
@@ -22,9 +22,14 @@ function submit_search() {
         autorxButton.addEventListener('click', alert_message);
         autorxButton.appendChild(innerdiv);
         // Locate a good place to put the button
-        const mainBody = document.getElementsByTagName('main');
-        const header = document.getElementsByTagName('header');
-        document.querySelectorAll('header div')[0].children[0].appendChild(autorxButton);
+        const qelements = 'header div';
+        try {
+            document.querySelectorAll(qelements)[0].children[0].appendChild(autorxButton);
+        } catch (error) {
+            window.alert("Unable to locate a place to put 'AutoRx'");
+            console.log('Searched for: '+qelements);
+            console.log(error);
+        }
         clearInterval(interval);
     }
 };
@@ -36,11 +41,14 @@ function alert_message() {
     // For Demos - Dev Site
     // const url = `https://dev-autorx.xjoin.io/?ro=1021112&mi=15000&test=false`
 
-    // For use with Tekmetric sandbox - grab the RO #
+    //
+    // *BELOW* - For use with Tekmetric sandbox
+    //
+    // Grab the RO #
     // const ro = document.getElementsByTagName('title')[0].innerHTML.match('#([0-9]*):')[1]
 
     // AutoRx Dev Site
-    // const url = `https://dev-autorx.xjoin.io/?ro=1021112&mi=15000&test=false`
+    // const url = `https://dev-autorx.xjoin.io/?ro=${ro}&mi=15000&test=false`
 
     // AutoRx Prod Site
     // const url = `https://autorx.xjoin.io/?ro=${ro}&mi=15000&test=false`
