@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tekmetric to AutoRX
 // @namespace    http://tampermonkey.net/
-// @version      2024-05-08
+// @version      2024-05-09
 // @description  AI to improve your sales and insights!
 // @author       XJoin LLC
 // @match        https://shop.tekmetric.com/admin/shop/4728/repair-orders/*
@@ -97,6 +97,7 @@ function go_autorx() {
 
     window.open(url, '_blank').focus();
 }
+
 // Set this to `true` for demos. This turns off mileage blocker.
 let demo = true;
 // Used to check if mileage has been set on the RO and if it can be retrieved
