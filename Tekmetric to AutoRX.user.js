@@ -59,7 +59,7 @@ function builder() {
         autorxButton.setAttribute('style',`transition: all .25s ease-in-out; position: fixed; bottom: 0; left: 5%; display: inline-flex;
                                         cursor: pointer; align-items: center; justify-content: center; margin: 0 3em 3em 0; border-radius: 50%;
                                         padding: .2em; width: 60px; height: 60px; background-color: #0396ff; background-image: linear-gradient(to bottom right, #e6f4ff, #0396ff);
-                                        box-shadow: 7px 7px 3px lightblue; text-shadow: .5px .5px #81a6cc; z-index:100;`);
+                                        box-shadow: 7px 7px 3px lightblue; text-shadow: .5px .5px #81a6cc; z-index:1500;`);
         autorxButton.addEventListener('click', go_autorx);
         autorxButton.appendChild(innerdiv);
 
