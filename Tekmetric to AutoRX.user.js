@@ -4,7 +4,7 @@
 // @version      2024-05-09
 // @description  AI to improve your sales and insights!
 // @author       XJoin LLC
-// @match        https://shop.tekmetric.com/admin/shop/4728/repair-orders/*
+// @match        https://*.tekmetric.com/admin/shop/4728/repair-orders/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
 // @grant        none
 // @downloadURL  https://github.com/xjoin-ai/tampermonkey/raw/main/Tekmetric%20to%20AutoRX.user.js
@@ -58,7 +58,7 @@ function builder() {
         autorxButton.setAttribute('style',`transition: all .25s ease-in-out; position: fixed; bottom: 0; left: 5%; display: inline-flex;
                                         cursor: pointer; align-items: center; justify-content: center; margin: 0 3em 3em 0; border-radius: 50%;
                                         padding: .2em; width: 60px; height: 60px; background-color: #0396ff; background-image: linear-gradient(to bottom right, #e6f4ff, #0396ff);
-                                        box-shadow: 7px 7px 3px lightblue; text-shadow: .5px .5px #81a6cc;`);
+                                        box-shadow: 7px 7px 3px lightblue; text-shadow: .5px .5px #81a6cc; z-index:100;`);
         autorxButton.addEventListener('click', go_autorx);
         autorxButton.appendChild(innerdiv);
 
