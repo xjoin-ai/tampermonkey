@@ -4,7 +4,8 @@
 // @version      2024-05-09
 // @description  AI to improve your sales and insights!
 // @author       XJoin LLC
-// @match        https://*.tekmetric.com/admin/shop/4728/repair-orders/*
+// @match        https://sandbox.tekmetric.com/admin/shop/*/repair-orders/*
+// @match        https://shop.tekmetric.com/admin/shop/*/repair-orders/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
 // @grant        none
 // @downloadURL  https://github.com/xjoin-ai/tampermonkey/raw/main/Tekmetric%20to%20AutoRX.user.js
